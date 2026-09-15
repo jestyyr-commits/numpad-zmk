@@ -13,27 +13,29 @@
         debounce-press-ms = <10>;
         debounce-release-ms = <10>;
 
+        // CORRECTED order -- matches actual confirmed wiring, not the
+        // originally planned order. Position 0 = physical top-left key.
         input-gpios
-            = <&gpio0 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 8  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio1 0  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio1 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio1 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio0 9  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio1 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&gpio1 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&gpio1 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 102 -- row1 col1
+            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 029 -- row1 col2
+            , <&gpio0 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 006 -- row1 col3
+            , <&gpio1 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 106 -- row1 col4
+            , <&gpio1 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 107 -- row2 col1
+            , <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 002 -- row2 col2
+            , <&gpio0 8  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 008 -- row2 col3
+            , <&gpio1 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 104 -- row2 col4
+            , <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 031 -- row3 col1
+            , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 115 -- row3 col2
+            , <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 017 -- row3 col3
+            , <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 011 -- row3 col4
+            , <&gpio0 9  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 009 -- row4 col1
+            , <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 113 -- row4 col2
+            , <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 020 -- row4 col3
+            , <&gpio1 0  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 100 -- row4 col4
+            , <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 010 -- row5 col1
+            , <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 111 -- row5 col2
+            , <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 024 -- row5 col3
+            , <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 022 -- row5 col4
             ;
     };
 
