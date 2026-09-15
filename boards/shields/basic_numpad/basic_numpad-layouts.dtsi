@@ -7,6 +7,7 @@
         display-name = "4x5";
 
         transform = <&transform0>;
+        kscan = <&kscan0>;
 
         keys
             = <&key_physical_attrs 100 100   0   0 0 0 0>
